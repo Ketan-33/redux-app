@@ -1,14 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
-const _layout = () => {
-  return (
-    <View>
-      <Text>_layout</Text>
-    </View>
-  )
-}
-
-export default _layout
-
-const styles = StyleSheet.create({})
+import { Stack } from "expo-router";
+import UserProvider from "./context/UserProvider";
+const MainApplication = () => (
+    <UserProvider >
+        <Stack screenOptions={{
+            headerShown: false
+        }} />
+    </UserProvider>)
+export default MainApplication
